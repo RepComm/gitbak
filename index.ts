@@ -12,7 +12,10 @@ function help() {
     "help - shows this message\n",
     "list - shows backups\n",
     "install - iterates backups.json and installs new entries\n",
-    ""
+    "add <provider> <user> <repo> - tracks a repository\n",
+    "remove <provider> <user> <repo> - stops tracking a repository\n",
+    "purge - removes untracked-installed repositories\n",
+    "update - fetches newest version of tracked repos (if applicable)"
   );
 }
 
@@ -219,6 +222,12 @@ function init() {
       if (addCmdUser == "") throw "no user";
       if (addCmdRepo == "") throw "no repo";
       remove(addCmdProvider, addCmdUser, addCmdRepo);
+      break;
+    case "update":
+      throw "not implemented yet";
+      break;
+    case "purge":
+      throw "not implemented yet";
       break;
     default:
       console.log(`command "${cmd}" is not handled`);
