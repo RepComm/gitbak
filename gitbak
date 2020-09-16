@@ -1,0 +1,2 @@
+# run deno, allow all permissions, using script index.ts, passing bash $@ (supplied cli arguments)
+deno run --allow-all ./index.ts $@
